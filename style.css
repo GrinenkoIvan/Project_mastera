@@ -603,8 +603,8 @@ a:active {
   background: url(contacts_fon.png);
   background-size: auto;
   height: auto;
-  position: relative;  
-} 
+  position: relative;
+}
 #contacts_fon::after {
   content: "";
   background: rgba(0, 0, 0, 0.3);
@@ -630,31 +630,29 @@ a:active {
 }
 
 .grid {
- display: grid;
- grid-template-columns: 1fr 1fr 1fr 1fr;
- gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
 }
 
 .element {
- /* background: rgb(171, 229, 179); */
- padding: 10px;
- border-radius: 20px;
- text-align: center;
- border: 3px solid #2de849;
-
+  /* background: rgb(171, 229, 179); */
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  border: 3px solid #2de849;
 }
 
 .element a[href^="tel:"]:before {
-    content: "\260e";
-    margin-top: auto;
-    color:#fddb02 ;
+  content: "\260e";
+  margin-top: auto;
+  color: #fddb02;
 }
 
 .cekciya_dl {
   margin: 0px;
   padding: 40px;
 }
-
 .cekciya_dl {
   background: url(section.png);
   background-size: auto;
@@ -664,11 +662,11 @@ a:active {
   /* font-weight: bold; */
   font-style: italic;
   font-size: 17px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .cekciya_dl::after {
   content: "";
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(243, 9, 9, 0.3);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -676,36 +674,29 @@ a:active {
   top: 0;
   z-index: 1;
 }
-
-
-
-
-.contacts_ul {
-  display: inline; /*выравниваем списки ul в одну строку*/ 
+ul .contacts_ul {
+  display: inline; /*выравниваем списки ul в одну строку*/
   list-style: none; /*убираем маркеры списка(ul)*/
   margin: 50px 50px;
   padding: 20px 20px;
-  color: #eee;
+  color: #f1ca6f;
 }
 .contacts_ul li {
-margin-right: 15px ;  
+  margin-right: 15px;
 }
-
-
 /* -------------------------------------------------------------------------------------------------------------------
  файл "About" " О нас " */
-body{
+body {
   background: url(Forest.png);
-  
-} 
+}
 .header_about {
- color:#252b42
+  color: #252b42;
 }
 .about {
   background-image: url(stena1.png);
   text-align: center;
   margin: 20px 40px;
-  padding: 20px; 
+  padding: 20px;
   /* opacity: 0.5; */
 }
 ol {
@@ -713,7 +704,7 @@ ol {
 }
 /* ----------------------------------------------------------------------------------------------------------------------
 файл партнёры */
- .partners_all {
+.partners_all {
   background: url(Partners.png);
   background-size: auto;
   height: 800px !important;
@@ -722,7 +713,7 @@ ol {
   font-weight: bold;
   font-style: italic;
   font-size: 17px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 /* .partners_all::after {
   content: "";
@@ -737,13 +728,6 @@ ol {
 .part_all {
   text-align: center;
 }
-
-
-
-
-
-
-
 
 /* Медиа запросы */
 @media (max-width: 1050px) {
@@ -798,7 +782,7 @@ ol {
   } */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1050px) {
   .contact button {
     width: 100%;
   }
@@ -808,7 +792,7 @@ ol {
   }
 
   .top__header--menu ul {
-    display: none;
+    display: inline-block;
   }
 
   .top__header--logo {
