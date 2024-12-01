@@ -5,29 +5,30 @@
   --text-color: #252b42;
   --second-text-color: #737373;
   --light--textcolor: #ffffff;
+  --font-color: #877e7e;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  background:rgb(38, 38, 65);
+  background-repeat: round;
 }
-a {
-  color: rgb(252, 252, 252);
-}
+
 /* Неработает посещенные и непосещенные ссылки, разобраться */
 /* a:link {
   color: rgb(126, 102, 245)
-} */
-/* a:visited {
-  color: rgb(245, 140, 210)
-} */
+}  */
+ a:visited {
+  color: rgb(252, 248, 251)
+}
 a:hover {
   color: rgb(131, 252, 127);
 }
-a:active {
-  color: rgb(231, 17, 17);
-}
+/* a:active {
+  color: rgb(82, 164, 232);
+} */
 
 .wrap {
   max-width: 1050px;
@@ -35,14 +36,12 @@ a:active {
   margin: 0 auto;
 }
 .top {
-  background: url(index.png);
   background-size: auto;
   height: 650px;
   position: relative;
 }
 .top::after {
   content: "";
-  background: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -62,38 +61,49 @@ a:active {
 .top ul {
   display: flex; /*выравниваем списки ul в одну строку*/
   list-style: none; /*убираем маркеры списка(ul)*/
-  margin: 0;
-}
-
-.top li {
-  margin-left: 15px; /*отодвигаем от края списки li и также задаём между ними растояние в 21px*/
+  
 }
 .top__header--logo {
-  color: #f3f3f3;
-  font-size: 24px;
+  background:rgb(233, 105, 20);
+  color: var(--font-color);
+  font-size: 15px;
   font-weight: 700;
-  line-height: 52px;
-  letter-spacing: 0.1px;
+  border-radius: 15px;
+  /* line-height: 52px;
+  letter-spacing: 0.3px; */
+  filter:drop-shadow(1px 1px 30px rgba(59, 239, 4, 0.755));
 }
 .top__header--logo h3 a {
-  color: #f3f3f3;
+  color: var(--font-color);
 }
 .top_header--menu {
-  color: #f3f3f3;
+  color: var(--font-color);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 600px;
   line-height: 24px;
   letter-spacing: 0.2px;
   text-decoration: none;
 }
-.top_header--menu {
-  margin: 40 0;
+/* .top_header--menu ul a {
+  /* text-align: left; 
+  filter: drop-shadow(15px 15px 15px #bff704); 
+}*/
+.top_header--menu li{
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px; 
 }
-.top_header--menu ul a {
-  text-align: right;
+.start-dt{
+  padding: 20px;
+  margin: 10px;
+  background: url(image/contacts_fon.png);
+  width: 900px;
+  height: 500px;
+  border-radius: 20px;
+  filter:drop-shadow(1px 1px 30px rgba(236, 247, 71, 0.755));
 }
 #dt {
-  color: #e1e2e6;
+  color: rgb(202, 247, 0);
   text-align: center;
   font-size: 38px;
   font-weight: 400;
@@ -104,13 +114,14 @@ a:active {
   /*margin-top: 120px;*/
 }
 .top h4 {
-  color: #f3f3f3;
+  color: black;
   text-align: center;
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
   letter-spacing: 0.2px;
   /* margin: 40px 0; */
+  font-family: cursive;
 }
 .top__button {
   text-align: center;
@@ -186,20 +197,21 @@ a:active {
 }
 .choose__block {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .choose__element {
   flex-basis: 328px;
   box-sizing: border-box;
 }
 .clients {
-  background: var(--color-fon);
+  /* background: var(--color-fon); */
   padding: 80px 0 50px 0;
 }
 
 .clients h2 {
-  color: var(--text-color, #252b42);
+  color: black;
   font-size: 40px;
   font-weight: 700;
   line-height: 57px;
@@ -210,7 +222,7 @@ a:active {
 }
 
 .clients__text {
-  color: var(--second-text-color, #737373);
+  color: black;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -225,7 +237,7 @@ a:active {
 .clients__block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .clients__block--element {
@@ -272,6 +284,12 @@ a:active {
   letter-spacing: 0.2px;
   margin: 0;
   padding: 0;
+}
+
+.number_tel{
+ margin: 0;
+ padding: 0;
+ color: rgb(254, 0, 0);
 }
 
 .clients__block--footer img {
@@ -600,7 +618,7 @@ a:active {
  файл "Contacts" Контакты */
 
 #contacts_fon {
-  background: url(contacts_fon.png);
+  background: url(image/contacts_fon.png);
   background-size: auto;
   height: auto;
   position: relative;
@@ -674,7 +692,7 @@ a:active {
   top: 0;
   z-index: 1;
 }
-ul .contacts_ul {
+.contacts_ul {
   display: inline; /*выравниваем списки ul в одну строку*/
   list-style: none; /*убираем маркеры списка(ul)*/
   margin: 50px 50px;
@@ -686,9 +704,7 @@ ul .contacts_ul {
 }
 /* -------------------------------------------------------------------------------------------------------------------
  файл "About" " О нас " */
-body {
-  background: url(Forest.png);
-}
+
 .header_about {
   color: #252b42;
 }
@@ -732,7 +748,7 @@ ol {
 /* Медиа запросы */
 @media (max-width: 1050px) {
   .wrap {
-    padding: 0 40px;
+    padding: 0 20px;
     box-sizing: border-box;
   }
 }
@@ -775,6 +791,7 @@ ol {
   .contact select {
     flex-basis: 500px;
     margin-right: 0;
+    margin-left: 0;
   }
 
   /* .contact button{
